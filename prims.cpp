@@ -29,8 +29,7 @@ struct Graph
 // A utility function to create a new adjacency list node
 struct AdjListNode* newAdjListNode(int dest, int weight)
 {
-    struct AdjListNode* newNode =
-            (struct AdjListNode*) malloc(sizeof(struct AdjListNode));
+    struct AdjListNode* newNode = (struct AdjListNode*) malloc(sizeof(struct AdjListNode));
     newNode->dest = dest;
     newNode->weight = weight;
     newNode->next = NULL;
@@ -87,8 +86,7 @@ struct MinHeap
 // A utility function to create a new Min Heap Node
 struct MinHeapNode* newMinHeapNode(int v, int key)
 {
-    struct MinHeapNode* minHeapNode =
-           (struct MinHeapNode*) malloc(sizeof(struct MinHeapNode));
+    struct MinHeapNode* minHeapNode = (struct MinHeapNode*) malloc(sizeof(struct MinHeapNode));
     minHeapNode->v = v;
     minHeapNode->key = key;
     return minHeapNode;
@@ -97,8 +95,7 @@ struct MinHeapNode* newMinHeapNode(int v, int key)
 // A utilit function to create a Min Heap
 struct MinHeap* createMinHeap(int capacity)
 {
-    struct MinHeap* minHeap =
-         (struct MinHeap*) malloc(sizeof(struct MinHeap));
+    struct MinHeap* minHeap = (struct MinHeap*) malloc(sizeof(struct MinHeap));
     minHeap->pos = (int *)malloc(capacity * sizeof(int));
     minHeap->size = 0;
     minHeap->capacity = capacity;

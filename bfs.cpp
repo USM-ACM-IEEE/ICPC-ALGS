@@ -1,7 +1,7 @@
 // Program to print BFS traversal from a given
 // source vertex. BFS(int s) traverses vertices 
 // reachable from s.
-#include<iostream>
+#include <iostream>
 #include <list>
 
 using namespace std;
@@ -23,6 +23,7 @@ public:
 
 	// prints BFS traversal from a given source s
 	void BFS(int s);
+	~Graph(); // Destructor for cleaning up memory
 };
 
 Graph::Graph(int V)
@@ -73,6 +74,10 @@ void Graph::BFS(int s)
 			}
 		}
 	}
+}
+
+Graph::~Graph(){
+	delete [] adj;
 }
 
 // Driver program to test methods of graph class

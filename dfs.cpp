@@ -25,6 +25,7 @@ public:
     // DFS traversal of the vertices
     // reachable from v
     void DFS(int v);
+    ~Graph();
 };
  
 Graph::Graph(int V)
@@ -66,4 +67,7 @@ void Graph::DFS(int v)
     // to print DFS traversal
     DFSUtil(v, visited);
 }
- 
+
+Graph::~Graph(){
+    delete [] adj;
+ }
